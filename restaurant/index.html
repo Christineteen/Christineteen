@@ -1,0 +1,226 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restraunt website</title>
+    <link rel="stylesheet" href="mystyle.css"/>
+	<script type="text/javascript" src="text.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#testimonials">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <h1 class="logo">Backyard Bowls</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Eat Right Food</h1>
+            <h1>Eat Healthy,</h1>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+			<header>
+                <h1>About Us</h1>
+				</header>
+				<h3>“To make sure you're eatin' good whenever you step into Backyard Bowls.”
+				<br>
+Thank you for choosing us.</h3>
+               
+            </div>
+            <div class="about-img">
+                <img src="images/chicken.jpg" alt="food" />
+            </div>
+        </div>
+    </section>
+    
+<section id="food-menu">
+  <h2 class="food-menu-heading">Food Menu</h2>
+  <div class="food-menu-container container">
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/meatball.jpg" alt="" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Meatball</h2>
+        <br>
+        <p class="food-price">Price:Ksh 500</p>
+        <button class="food-order-btn" data-food-name="Meatball" data-food-price="500">Order</button>
+      </div>
+    </div>
+
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/noodles.jpg" alt="error" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Noodles</h2>
+        <br>
+        <p class="food-price">Price:Ksh 500</p>
+        <button class="food-order-btn" data-food-name="Noodles" data-food-price="500">Order</button>
+      </div>
+    </div>
+
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/burger.jpg" alt="" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Burger</h2>
+        <br>
+        <p class="food-price">Price:Ksh 500</p>
+        <button class="food-order-btn" data-food-name="Burger" data-food-price="500">Order</button>
+      </div>
+    </div>
+
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/tacos.jpg" alt="" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Tacos</h2>
+        <br>
+        <p class="food-price">Price:Ksh 500</p>
+        <button class="food-order-btn" data-food-name="Tacos" data-food-price="500">Order</button>
+      </div>
+    </div>
+
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/ribs.jpg" alt="" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Ribs</h2>
+        <br>
+        <p class="food-price">Price:Ksh 500</p>
+        <button class="food-order-btn" data-food-name="Ribs" data-food-price="500">Order</button>
+      </div>
+    </div>
+
+    <div class="food-menu-item">
+      <div class="food-img">
+        <img src="images/chicken.jpg" alt="" />
+      </div>
+      <div class="food-description">
+        <h2 class="food-titile">Chicken</h2>
+        <br>
+        <p class="food-price">Price:KSH 500</p>
+        <button class="food-order-btn" data-food-name="Chicken" data-food-price="500">Order</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+      const orderButtons = document.querySelectorAll('.food-order-btn');
+
+      orderButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          const foodName = event.target.dataset.foodName;
+          const foodPrice = event.target.dataset.foodPrice;
+          alert(`Thank you for ordering ${foodName} for Ksh ${foodPrice}!`);
+        });
+      });
+    </script>
+
+    <section id="testimonials">
+        <h2 class="testimonial-title">What Our Customers Say</h2>
+        <div class="testimonial-container container">
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                  
+                        <p class="customer-name">Maina</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    "Highly recommend this restaurant for a romantic date night. The ambiance was perfect."
+
+            </div>
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                       
+                        <p class="customer-name">Munene</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                  "Delicious food and wonderful staff. Can't wait to come back!"
+                </p>
+
+            </div>
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        
+                        <p class="customer-name">Tristian</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                 "Best burger I've had in a long time. This place never disappoints.
+                </p>
+
+            </div>
+        </div>
+    </section>
+<section id="contact">
+  <div class="contact-container container">
+    <div class="contact-img">
+      <img src="images/quotes.jpg" alt="" />
+    </div>
+
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <input type="text" id="name-input" placeholder="Your Name" />
+      <input type="tel" id="phone-input" placeholder="Phone Number" />
+      <input type="text" id="location-input" placeholder="Location" />
+	   <input type="email" id="email-input" placeholder="E-Mail" />
+      <textarea id="message-input" cols="30" rows="6" placeholder="Type Your Message"></textarea>
+      <a href="#" class="btn btn-primary" onclick="submitForm()">Submit</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('name-input').value;
+	const phone = document.getElementById('phone-input').value;
+	const location = document.getElementById('location-input').value;
+    const email = document.getElementById('email-input').value;
+    const message = document.getElementById('message-input').value;
+    
+    console.log(`Name: ${name}, Phone: ${phone}, Location: ${location}, Email: ${email}, Message: ${message}`);
+    
+    document.getElementById('name-input').value = '';
+	document.getElementById('phone-input').value = '';
+	document.getElementById('location-input').value = '';
+    document.getElementById('email-input').value = '';
+    document.getElementById('message-input').value = '';
+    
+    alert('Thanks for your message!');
+  }
+</script>
+
+    <footer id="footer">
+        <h2>Backyard Bowls 2023 &copy; all rights reserved</h2>
+    </footer>
+</html>
